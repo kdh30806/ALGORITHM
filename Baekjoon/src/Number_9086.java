@@ -4,16 +4,21 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class Basic {
+public class Number_9086 {
 
 	public static void main(String[] args) throws IOException {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		String[] NM = br.readLine().split(" ");
-		int N = Integer.parseInt(NM[0]);
-		int M = Integer.parseInt(NM[1]);
+		int N = Integer.parseInt(br.readLine());
+		
+		for(int i = 0 ; i < N ; i++) {
+			String str = br.readLine();
+			
+			bw.write(str.charAt(0) +""+ str.charAt(str.length()-1) + "\n");
+		}
+		
 		
 		br.close();
 		bw.flush();

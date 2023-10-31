@@ -4,32 +4,31 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class Number_10798 {
+public class Number_2444 {
 
 	public static void main(String[] args) throws IOException {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
+		int N = Integer.parseInt(br.readLine());
+		int max = 2*N-1;
 		
-		String[][] strArray = new String[5][15];
-		
-		for(int i = 0 ; i < 5 ; i++) {
-			char[] temp = br.readLine().toCharArray();
-			for(int i2 = 0 ; i2 < temp.length ; i2++) {
-				strArray[i][i2] = String.valueOf(temp[i2]);
-			}
-		}
-		
-		for(int i = 0 ; i < 15 ; i++) {
-			for(int i2 = 0 ; i2 < 5 ; i2++) {
-				if(strArray[i2][i] != null && !strArray[i2][i].equals("")) {
-					String str = strArray[i2][i];
-					bw.write(str);
-				}
-			}
-		}
+		for(int i = 1 ; i <= 2*N-1 ; i++ ) {
+			int whiteSpaceCount = Math.abs(max - (2*i-1));
+			int starCount = max - whiteSpaceCount;
 
+			for(int i2 = 0 ; i2 < whiteSpaceCount/2 ; i2++) {
+				bw.write(" ");
+			}
+			
+			for(int i2 = 0 ; i2 < starCount ; i2++) {
+				bw.write("*");
+			}
+			
+			bw.write("\n");
+		}
+		
 		br.close();
 		bw.flush();
 		bw.close();

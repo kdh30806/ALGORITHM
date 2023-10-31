@@ -4,16 +4,19 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class Basic {
+public class Number_25038 {
 
 	public static void main(String[] args) throws IOException {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		String[] NM = br.readLine().split(" ");
-		int N = Integer.parseInt(NM[0]);
-		int M = Integer.parseInt(NM[1]);
+		bw.write("         ,r'\"7\n");
+		bw.write("r`-_   ,'  ,/\n");
+		bw.write(" \\. \". L_r'\n");
+		bw.write("   `~\\/\n");
+		bw.write("      |\n");
+		bw.write("      |");
 		
 		br.close();
 		bw.flush();
